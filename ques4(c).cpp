@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    a = 2;
+    b = 3;
+    c = 1;
+
+    int arr[a][b];
+    int arr2[b][a];
+
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            arr[i][j] = c;
+            c++;
+        }
+    }
+
+    cout << "Original matrix:" << endl;
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    
+    for (int i = 0; i < b; i++) {
+        for (int j = 0; j < a; j++) {
+            arr2[i][j] = arr[j][i];
+        }
+    }
+
+    cout << "Transposed matrix:" << endl;
+    for (int i = 0; i < b; i++) {
+        for (int j = 0; j < a; j++) {
+            cout << arr2[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
